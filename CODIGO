@@ -1,0 +1,28 @@
+#Proyecto Higher or Lower Musical
+# EN esta parte del proyecto presentare el avance 2 el cual corresponde a las operaciones con operadores
+#las cuales aplicare a las metricas de canciones (reprdroducciones en Spotify) (por ahora sera la prueba aritmetica y no el funcionamiento del juego como tal)
+Cancion1nombre = "Here comes the sun / The Beatles"
+Cancion1ReprosSP = 1919705952
+
+Cancion2nombre = "Californication / Red Hot Chili Peppers"
+Cancion2ReprosSP = 2118332024
+
+print(" Round 1 FIGHT")
+print("Canción 1:", Cancion1nombre)
+print("Reproducciones:", Cancion1ReprosSP)
+print("")
+print("Canción 2:", Cancion2nombre)
+print("Reproducciones:", Cancion2ReprosSP)
+print("")
+
+Cancion1esmayor = Cancion1ReprosSP > Cancion2ReprosSP
+Cancion2esmayor = Cancion2ReprosSP > Cancion1ReprosSP
+
+print("¿La Canción 1 tiene más reproducciones?:", Cancion1esmayor)
+print("¿La Canción 2 tiene más reproducciones?:", Cancion2esmayor)
+
+Diferencia=Cancion2ReprosSP-Cancion1ReprosSP
+print("diferencia de visitas:",Diferencia)
+
+#nota se que con else y if quedara mucho mejor la estructura
+#pero ya no quize adelantarme a lo visto en clase
