@@ -1,4 +1,3 @@
-
 def es_mayor(repros_a, repros_b):
     """Calcula que reproduccion es mayor."""
     return repros_a > repros_b
@@ -23,11 +22,14 @@ print("Opción 2:", CANCION_2_NOMBRE, end="\n\n")
 
 eleccion_1 = int(input("¿Cuál canción crees que tiene MÁS reproducciones? (Elige 1 o 2): "))
 
+# Aquí entra el ciclo en lugar del if
+while eleccion_1 != 1 and eleccion_1 != 2:
+    print("opcion no valida, Debiste de  elegir entre 1 o 2")
+    eleccion_1 = int(input("¿Cuál canción crees que tiene MÁS reproducciones? (Elige 1 o 2): "))
+
 cancion_1_es_mayor = es_mayor(CANCION_1_REPROS, CANCION_2_REPROS)
 
-if eleccion_1 != 1 and eleccion_1 != 2:
-    print("opcion no valida, Debiste de  elegir entre 1 o 2")
-elif (eleccion_1 == 1 and cancion_1_es_mayor) or (eleccion_1 == 2 and not cancion_1_es_mayor):
+if (eleccion_1 == 1 and cancion_1_es_mayor) or (eleccion_1 == 2 and not cancion_1_es_mayor):
     print("¡Correcto! Has acertado esta ronda")
     puntos = puntos + 1
 else:
@@ -52,11 +54,14 @@ print("Canción 3:", CANCION_3_NOMBRE, end="\n\n")
 
 eleccion_2 = int(input("¿Cuál canción crees que tiene MÁS reproducciones? (Elige 3 o 4): "))
 
+# Aquí entra el ciclo en lugar del if
+while eleccion_2 != 3 and eleccion_2 != 4:
+    print("opcion no valida, Debiste de  elegir entre 3 o 4")
+    eleccion_2 = int(input("¿Cuál canción crees que tiene MÁS reproducciones? (Elige 3 o 4): "))
+
 cancion_4_es_mayor = es_mayor(CANCION_4_REPROS, CANCION_3_REPROS)
 
-if eleccion_2 != 3 and eleccion_2 !=4:
-    print("opcion no valida, Debiste de  elegir entre 3 o 4")
-elif (eleccion_2 == 4 and cancion_4_es_mayor) or (eleccion_2 == 3 and not cancion_4_es_mayor):   
+if (eleccion_2 == 4 and cancion_4_es_mayor) or (eleccion_2 == 3 and not cancion_4_es_mayor):   
     print("¡Correcto! Has acertado esta ronda")
     puntos = puntos + 1
 else:
@@ -73,4 +78,3 @@ elif puntos == 1:
     print("Buen intento, acertaste la mitad.")
 else:
     print("Suerte para la próxima, obtuviste 0 puntos.")
-
